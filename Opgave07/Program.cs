@@ -52,6 +52,8 @@ else if (tal1 > tal2) //tal1 støre end tal2
 else 
     Console.WriteLine("Talene er ens");
 
+Console.WriteLine();
+
 
 //opgave 7.5
 Console.WriteLine("Udskriver det laveste tal først\n" +
@@ -64,5 +66,60 @@ if (tal1 > tal2)
 else
     Console.WriteLine(tal1 + " " + tal2);
 
+Console.WriteLine();
+
 
 // opgave 7.6
+Console.WriteLine("Er tallet positivt, negativt eller 0\n" +
+    "Indtast tallet og klik enter");
+tal1 = int.Parse(Console.ReadLine());
+
+if (tal1 < 0)
+    Console.WriteLine("Tallet er negativ.");
+else if (tal1 > 0)
+    Console.WriteLine("Tallet er positivt");
+else
+    Console.WriteLine("Tallet er 0");
+
+Console.WriteLine();
+
+//opgave 7.7 & 7.8
+double pris;
+double express = 1;
+
+Console.WriteLine("Hvor meget vejer brevet?");
+double weight = double.Parse(Console.ReadLine());
+Console.WriteLine("Skal det sendes med express?\n" +
+    "1 for ja og 0 for nej.");
+bool answer = bool.Parse(Console.ReadLine());
+
+if (answer == true)
+    express = 1.50;
+
+
+switch (weight) {
+    case < 20:
+        pris = 5 * express;
+        Console.WriteLine("Du skal betale {0}kr", pris);
+        break;
+    case < 50:
+        pris = 7 * express;
+        Console.WriteLine("Du skal betale {0}kr", pris);
+        break;
+    case < 100:
+        pris = 10 * express;
+        Console.WriteLine("Du skal betale {0}kr", pris);
+        break;
+    case < 150:
+        pris = 15 * express;
+        Console.WriteLine("Du skal betale {0}kr", pris);
+        break;
+    case < 200:
+        pris = 20 * express;
+        Console.WriteLine("Du skal betale {0}kr", pris);
+        break;
+    case > 199:
+        pris = 30 * express;
+        Console.WriteLine("Du skal betale {0}kr", pris);
+        break;
+}
