@@ -36,5 +36,7 @@ Console.WriteLine();
 
 //opgave 13.4
 Console.WriteLine("sidste opgave");
-for (i = 0; i < numbers.Length; i++)
+for (i = 0; i < numbers.Length; i++) {
     numbers[i] = numbers[i] + 5;
+    Console.WriteLine(numbers[i]);
+}
