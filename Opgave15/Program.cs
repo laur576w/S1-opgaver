@@ -7,7 +7,7 @@ while (input.ToLower() != "exit") {
     Console.WriteLine("Skriv (0) for at få idags dato og tid");
     Console.WriteLine("Skriv (1) for at finde ud af hvor mange dage der er til jul");
     Console.WriteLine("Skriv (2) for at finde ud af hvor lnag tid til min fødselsdag");
-    Console.WriteLine("Skriv (2) for at finde ud af hvor lnag tid til din dato");
+    Console.WriteLine("Skriv (3) for at finde ud af hvor lnag tid til din dato");
 
     //check which they wanna check or if exit
     input = Console.ReadLine();
