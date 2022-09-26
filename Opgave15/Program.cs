@@ -24,7 +24,7 @@ while (input.ToLower() != "exit") {
 
              //Calculate countdown timer.
              TimeSpan till_xmas = xmas - now;
-             countDown = string.Format("{0} Days, {1} Hours, {2} Minutes, {3} Seconds to christmas.", till_xmas.Days, till_xmas.Hours, till_xmas.Minutes, till_xmas.Seconds);
+             countDown = string.Format("{0} Dage, {1} Timer, {2} Minuter, {3} Sekunder til juleaften.", till_xmas.Days, till_xmas.Hours, till_xmas.Minutes, till_xmas.Seconds);
              Console.WriteLine(countDown);
              break;
             
@@ -33,7 +33,7 @@ while (input.ToLower() != "exit") {
              DateTime bday = DateTime.Parse($"22/11/{year}");
 
              TimeSpan till_bday = bday - now;
-             countDown = string.Format("{0} Days, {1} Hours, {2} Minutes, {3} Seconds to birthday.", till_bday.Days, till_bday.Hours, till_bday.Minutes, till_bday.Seconds);
+             countDown = string.Format("{0} Dage, {1} Timer, {2} Minuter, {3} Sekunder til min fødselsdag.", till_bday.Days, till_bday.Hours, till_bday.Minutes, till_bday.Seconds);
              Console.WriteLine(countDown);
              break;
 
@@ -42,7 +42,7 @@ while (input.ToLower() != "exit") {
             Console.WriteLine("Skriv med numre dag/måned/årstal");
             DateTime time_input = DateTime.Parse(Console.ReadLine());
             TimeSpan till_x = time_input - now;
-            countDown = string.Format("{0} Days, {1} Hours, {2} Minutes, {3} Seconds to your time.", till_x.Days, till_x.Hours, till_x.Minutes, till_x.Seconds);
+            countDown = string.Format("{0} Dage, {1} Timer, {2} Minuter, {3} Sekunder til din tid.", till_x.Days, till_x.Hours, till_x.Minutes, till_x.Seconds);
             Console.WriteLine(countDown);
             break;
     }
