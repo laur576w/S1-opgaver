@@ -15,7 +15,7 @@ while (input.ToLower() != "exit") {
     switch (input) {
         case "0":
             //today
-            Console.WriteLine(now.ToString());
+            Console.WriteLine(now.ToString("d'-'MM'-'yyyy HH:mm"));
             break;
 
         case "1":
