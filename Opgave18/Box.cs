@@ -17,8 +17,11 @@ namespace Opgave18 {
             Width = width;
             Height = height;
         }
-        public void PrintInfo() {
-            Console.WriteLine($"{Width}x{Height}x{Length}");
+
+        public string PrintInfo() { 
+            return $"width: {Width}\n" +
+                $"height: {Height}\n" +
+                $"length: {Length}";
         }
     }
     
