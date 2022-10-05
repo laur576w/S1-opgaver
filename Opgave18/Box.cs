@@ -18,10 +18,31 @@ namespace Opgave18 {
             Height = height;
         }
 
-        public string PrintInfo() { 
-            return $"width: {Width}\n" +
+        public void PrintInfo() { 
+            Console.WriteLine( $"width: {Width}\n" +
                 $"height: {Height}\n" +
-                $"length: {Length}";
+                $"length: {Length}");
+            CalcVolume();
+            CalcSurface();
+        }
+        public void CalcVolume() {
+            double volu = Height * Width * Length;
+            Console.WriteLine($"Volume: {volu}");
+        }
+
+        public void CalcSurface() {
+            double surfa = 2 * Height * Length + 2 * Height * Width + 2 * Length * Width;
+            Console.WriteLine($"Surface: {surfa}");
+        }
+
+        //can't really understand what these private ones are for in the task
+        private void Surface() {
+
+        }
+
+        private void Volume() {
+            
+            
         }
     }
     

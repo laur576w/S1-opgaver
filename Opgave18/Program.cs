@@ -1,5 +1,8 @@
 ﻿using Opgave18;
 
-Box box1 = new Box(70, 65, 80);
+Box box1 = new(40, 60, 20);
 
-Console.WriteLine(box1.PrintInfo());
+
+box1.PrintInfo();
+box1.CalcVolume();
+box1.CalcSurface();
