@@ -12,6 +12,8 @@ namespace Opgave19 {
         public double Price { get; set; }
         public bool IsSold { get; set; }
         public bool OnSale { get; set; }
+
+        //main object
         public Car(string brand, string model, string color, double price, bool isSold) {
             Brand = brand;
             Model = model;
@@ -20,6 +22,8 @@ namespace Opgave19 {
             IsSold = isSold;
             OnSale = false;
         }
+
+        //print info on whole car
         public void PrintInfo() {
             if (IsSold == true) {
                 Console.WriteLine($"\nBrand: {Brand}   Model: {Model}   Color {Color}   Sold: yes   Price: {Price}.\n");
@@ -28,10 +32,13 @@ namespace Opgave19 {
                 Console.WriteLine($"\nBrand: {Brand}   Model: {Model}   Color {Color}   Sold: No   Price: {Price}.\n");
             }
         }
+
+        //overwrite tostring
         public override string ToString() {
             return $"{Brand} {Model}";
         }
 
+        //on sale command
         public void PutOnSale() {
             OnSale = true;
             Price *= 0.90;

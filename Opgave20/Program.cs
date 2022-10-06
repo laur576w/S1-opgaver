@@ -1,25 +1,26 @@
 ﻿using System;
-﻿using System.IO;
+using System.IO;
 using Opgave20;
 
 
 
-//working code
-List<int> num = new List<int>();
-using (StreamReader sr = new("Values.txt")) {
-    
-    while (!sr.EndOfStream) {
-        string[] n = sr.ReadToEnd().Split('\n');
-        
-        //write and add them to the line
-        foreach (string s in n) { 
-            num.Add(int.Parse(s));
-            Console.WriteLine(s);
-        }
+static List<int> GetNumbersFromFile(string path) {
+    int i = 0;
+    List<int> numbers = new();
+    StreamReader sr = new(path);
+    string[] n = sr.ReadToEnd().Split('\n');
+    sr.Close();
+    foreach (string s in n) {
+        numbers.Add(int.Parse(s));
     }
-    //adds the numbers up
-    Console.WriteLine("Sum: {0}", num.Sum());
-    //average
-    Console.WriteLine("Average: {0}", num.Average());
+
+    return numbers;
 }
+
+//adds the numbers up
+Console.WriteLine("Sum: {0}", GetNumbersFromFile("Values.txt").Sum());
+//average
+Console.WriteLine("Average: {0}", GetNumbersFromFile("Values.txt").Average());
+
+
 
