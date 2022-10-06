@@ -1,17 +1,25 @@
+﻿using System;
 ﻿using System.IO;
+using Opgave20;
 
+
+
+//working code
+List<int> num = new List<int>();
 using (StreamReader sr = new("Values.txt")) {
-    string line;
-    int sum = 0;
-    double i = 0;
-    while ((line = sr.ReadLine()) != null) {
-        int number = int.Parse(line);
-        Console.WriteLine(number);
-        sum = sum + number;
-        i++;
+    
+    while (!sr.EndOfStream) {
+        string[] n = sr.ReadToEnd().Split('\n');
+        
+        //write and add them to the line
+        foreach (string s in n) { 
+            num.Add(int.Parse(s));
+            Console.WriteLine(s);
+        }
     }
-    Console.WriteLine("det her er sum {0}", sum);
-    i = sum / i;
-    Console.WriteLine("gennemsnittet er {0}", i);
+    //adds the numbers up
+    Console.WriteLine("Sum: {0}", num.Sum());
+    //average
+    Console.WriteLine("Average: {0}", num.Average());
 }
 
