@@ -20,7 +20,7 @@ static List<int> GetNumbersFromFile(string path) {
 //adds the numbers up
 Console.WriteLine("Sum: {0}", GetNumbersFromFile("Values.txt").Sum());
 //average
-Console.WriteLine("Average: {0}", GetNumbersFromFile("Values.txt").Average());
+Console.WriteLine("Average: {0}\n", GetNumbersFromFile("Values.txt").Average());
 
 
 
