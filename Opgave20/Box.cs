@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Opgave20 {
     internal class Box  {
-        public double Length { get; }
-        public double Width { get; }
-        public double Height { get; }
+        public int Length { get; }
+        public int Width { get; }
+        public int Height { get; }
         
-        public Box(double width, double height, double length) {
+        public Box(int height, int length, int width) {
             Length = length;
             Width = width;
             Height = height;
@@ -24,10 +24,11 @@ namespace Opgave20 {
                 $"length: {Length}");
             CalcVolume();
             CalcSurface();
+            Console.WriteLine(); 
         }
-        public void CalcVolume() {
-            double volu = Height * Width * Length;
-            Console.WriteLine($"Volume: {volu}");
+        public int CalcVolume() {
+            int volu = Height * Width * Length;
+            return volu;
         }
 
         public void CalcSurface() {
