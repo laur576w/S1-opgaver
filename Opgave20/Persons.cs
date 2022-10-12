@@ -24,5 +24,9 @@ namespace Persons {
             LastNames = lastnames;
             Ages = ages;
         }
+
+        public static Persons FindOldestPerson(List<Persons> persons) {
+            return;
+        }
     }
 }

@@ -69,11 +69,3 @@ Console.WriteLine("Youngest person {0} {1} with the age of {2}", FirstNames[ages
 
 
 
-
-string[] strings = new string[] { "fire", "fem", "seks" };
-
-var value = strings.Select((val, ix) => new { len = val.Length, ix })
-                   .OrderByDescending(x => x.len).FirstOrDefault();
-
-Console.WriteLine("Index of longest string is: " +
-                   (value != null ? value.ix : -1));
