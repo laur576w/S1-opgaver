@@ -1,5 +1,5 @@
 ﻿using Opgave20;
-using Persons;
+using Person;
 
 static List<int> GetNumbersFromFile(string path) {
     List<int> numbers = new();
@@ -51,21 +51,17 @@ foreach (int i in getVolumeFromFile("Boxes.txt")) {
 
 Console.WriteLine();
 
-
+List<Persons> persons = new();
 StreamReader reader = new("Persons.txt"); 
-List<string> FirstNames = new();
-List<string> LastNames = new();
-List<int> ages = new();
 string[] splitstring = reader.ReadToEnd().Split(',', '\n');
 for (int i = 0; i < splitstring.Length; i += 3) {
-    FirstNames.Add(splitstring[i]);
-    LastNames.Add(splitstring[i + 1]);
-    ages.Add(int.Parse(splitstring[i + 2]));
+    Persons person = new(splitstring[i], splitstring[i + 1], int.Parse(splitstring[i + 2]));
+    persons.Add(person);
 }
-
-Console.WriteLine("Oldest person {0} {1} with the age of {2}", FirstNames[ages.IndexOf(ages.Max())], LastNames[ages.IndexOf(ages.Max())],  ages.Max());
-Console.WriteLine("Youngest person {0} {1} with the age of {2}", FirstNames[ages.IndexOf(ages.Min())], LastNames[ages.IndexOf(ages.Min())], ages.Min());
-
-
-
+Console.WriteLine("oldest " + Persons.FindOldestPerson(persons));
+Console.WriteLine("youngest " + Persons.FindYoungestPerson(persons));
+Console.WriteLine("longest firstname " + Persons.LongestFirstName(persons));
+Console.WriteLine("shortest firstname " + Persons.ShortestFirstName(persons));
+Console.WriteLine("longest fullname " + Persons.LongestName(persons));
+Console.WriteLine("Shortest fullname" + Persons.ShortestName(persons));
 
