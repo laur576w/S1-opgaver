@@ -7,6 +7,36 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBlock 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10,20,-73,0">Dette er en ligegyldig lang tekst, som er så lang at den skal have et Linebreak <LineBreak />for ikke at fortsætte udover kanten</TextBlock>
+        <TextBlock 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Margin="10,83,0,0" 
+            TextTrimming="CharacterEllipsis" 
+            Text="Denne tekst er nogenlunde lige så lang som den ovenfor, forskellen er bare, at denne tekst ikke har et linebreak. I stedet bruges TextTrimming for at få det til at stå pænt" />
+        <TextBlock
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Margin="10,142,0,0"
+            TextWrapping="Wrap"
+            Text="Her står den sidste tekst. Denne tekst kunne være fuldstændig ligegyldig, men den lærer dig forhåbentlig et eller andet om egenskaben (property) TextWrapping"/>
+        <TextBox x:Name="tbxName" 
+                 HorizontalAlignment="Right" 
+                 VerticalAlignment="Center" 
+                 Margin="0,0,200,0" 
+                 MinHeight="50px" 
+                 MinWidth="50"
+                 Background="Beige"/>
+        <TextBox x:Name="tbxReadOnly" 
+                 IsReadOnly="True"
+                 HorizontalAlignment="left" 
+                 VerticalAlignment="Center" 
+                 Margin="200,0,0,0" 
+                 MinHeight="50px" 
+                 MinWidth="50"
+                 Background="Beige"/>
     </Grid>
 </Window>
