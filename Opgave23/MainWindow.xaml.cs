@@ -21,5 +21,9 @@ namespace Opgave23 {
         public MainWindow() {
             InitializeComponent();
         }
+
+        private void btnName_Click(object sender, RoutedEventArgs e) {
+            lblName.Content = tbxName.Text;
+        }
     }
 }

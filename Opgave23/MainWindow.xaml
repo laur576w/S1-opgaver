@@ -26,17 +26,27 @@
         <TextBox x:Name="tbxName" 
                  HorizontalAlignment="Right" 
                  VerticalAlignment="Center" 
-                 Margin="0,0,200,0" 
-                 MinHeight="50px" 
+                 Margin="0,0,175,0" 
+                 MinHeight="50" 
                  MinWidth="50"
-                 Background="Beige"/>
+                 Background="Beige"
+                 Text="Skriv dit navn."/>
         <TextBox x:Name="tbxReadOnly" 
                  IsReadOnly="True"
                  HorizontalAlignment="left" 
                  VerticalAlignment="Center" 
-                 Margin="200,0,0,0" 
-                 MinHeight="50px" 
+                 Margin="175,0,0,0" 
+                 MinHeight="50" 
                  MinWidth="50"
-                 Background="Beige"/>
+                 Background="Beige"
+                 Text="Jeg kan fortælle dig hvad dit navn er!"/>
+        <Button x:Name="btnName" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top" 
+                Margin="0,277,0,0" 
+                Click="btnName_Click">
+            klik når du har skrevet dit navn
+        </Button>
+        <Label x:Name="lblName" HorizontalAlignment="Center" VerticalAlignment="Top" MinHeight="50" MinWidth="50" Margin="0,315,0,0"/>
     </Grid>
 </Window>
