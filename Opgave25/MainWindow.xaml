@@ -8,10 +8,10 @@
         Title="Small Game" Height="350" Width="500">
     <Grid>
         <TextBlock x:Name="tblSmallCase" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="40" Width="40" Background="Pink" Text="Lille kasse" TextWrapping="Wrap" Margin="300,60,0,0" MouseDown="tblSmallCase_Click"/>
-        <TextBlock x:Name="tblGreen" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="20" Width="40" Background="yellow" Text="GRØN" TextWrapping="Wrap" Margin="70,130,0,0" MouseRightButtonDown="tblGreen_RightClick"/>
+        <TextBlock x:Name="tblGreen" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="20" Width="40" Background="yellow" Text="GRØN" TextWrapping="Wrap" Margin="70,130,0,0" MouseRightButtonDown="tblGreen_RightClick" MouseLeave="tblGreen_MouseLeave"/>
         <TextBlock x:Name="tblYellow" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="20" MinWidth="30" Background="Green" Text="GUL" TextWrapping="Wrap" Margin="400,180,0,0" MouseEnter="tblYellow_MouseEnter"/>
-        <TextBlock x:Name="tblSmallText" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="20" Width="40" Background="Yellow" Text="Jeg står med meget småt" TextWrapping="Wrap" FontSize="5px" Margin="50,268,0,0"/>
-        <TextBlock x:Name="tblBla" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="20" MinWidth="40" Background="LightSkyBlue"  Text="Bla bla bla bla bla bla bla bla" TextWrapping="Wrap" Margin="325,290,0,0"/>
+        <TextBlock x:Name="tblSmallText" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="20" Width="40" Background="Yellow" Text="Jeg står med meget småt" TextWrapping="Wrap" FontSize="5px" Margin="50,268,0,0" MouseEnter="tblSmallText"/>
+        <TextBlock x:Name="tblBla" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="20" MinWidth="40" Background="LightSkyBlue"  Text="Bla bla bla bla bla bla bla bla" TextWrapping="Wrap" Margin="325,290,0,0" MouseEnter="tblBla_MouseEnter"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0" Padding="5">
             <TextBlock x:Name="tblInstructions" MinHeight="20" Width="63" TextWrapping="Wrap" TextAlignment="Center" FontSize="9" >Her vil spillets instrucktioner stå! <LineBreak/> Tryk Start spillet for at begynde.</TextBlock>
         </Border>

@@ -70,5 +70,34 @@ namespace Opgave25 {
                 currentGameStep++;
             }
         }
+
+        private void tblGreen_MouseLeave(object sender, MouseEventArgs e) {
+            if (currentGameStep == 4) {
+                tblInstructions.Text = "Godt gjort!\n" +
+                    "Rør nu ved noget småt.";
+                currentGameStep++;
+            }
+        }
+
+        private void tblSmallText(object sender, MouseEventArgs e) {
+            if (currentGameStep == 5) {
+                tblInstructions.Text = "Sådan!\n" +
+                    "Sidste step - før musen over den brede 2 gange";
+                currentGameStep++;
+            }
+        }
+
+        private void tblBla_MouseEnter(object sender, MouseEventArgs e) {
+            int i = 0;
+            if (currentGameStep == 6) {
+                i++;
+                if (i >= 2 ) {
+                    tblInstructions.Text = "Tillyke du vandt!\n" +
+                        "Tryk på start for at prøve igen";
+                    isStarted = false;
+                    currentGameStep = 0;
+                }
+            }
+        }
     }
 }
