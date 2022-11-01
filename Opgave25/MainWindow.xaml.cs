@@ -25,6 +25,8 @@ namespace Opgave25 {
         private int currentGameStep = 0;
         //variable to keep track of the game status
         private bool isStarted = false;
+        //keeps count of 'x' subject needs reset when reached
+        private int MouseEnterCount = 0;
 
         private void btnStartGame_Click(object sender, RoutedEventArgs e) {
             if (isStarted == false) {
@@ -79,7 +81,7 @@ namespace Opgave25 {
             }
         }
 
-        private void tblSmallText(object sender, MouseEventArgs e) {
+        private void tblSmallText_MouseEnter(object sender, MouseEventArgs e) {
             if (currentGameStep == 5) {
                 tblInstructions.Text = "Sådan!\n" +
                     "Sidste step - før musen over den brede 2 gange";
@@ -88,14 +90,16 @@ namespace Opgave25 {
         }
 
         private void tblBla_MouseEnter(object sender, MouseEventArgs e) {
-            int i = 0;
+            
             if (currentGameStep == 6) {
-                i++;
-                if (i >= 2 ) {
+                MouseEnterCount++;
+                if (MouseEnterCount >= 2 ) {
                     tblInstructions.Text = "Tillyke du vandt!\n" +
                         "Tryk på start for at prøve igen";
                     isStarted = false;
+                    btnStartGame.Content = "Start Spillet!";
                     currentGameStep = 0;
+                    MouseEnterCount = 0;
                 }
             }
         }
