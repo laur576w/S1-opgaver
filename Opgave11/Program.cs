@@ -7,12 +7,14 @@ while (x <= 10) {
     Console.WriteLine(x);
     x++;
 }
+Console.WriteLine();
 
 //runs while x is bigger than 1
 while (x >= 1) {
     Console.WriteLine(x);
     x--;
 }
+Console.WriteLine();
 
 //even numbers from 1 - 20
 Console.WriteLine("Alle lige tal mellem 1 - 20");
@@ -24,6 +26,7 @@ while (x <= 20) {
     else
         x++;
 }
+Console.WriteLine();
 
 //odd numbers from 20 - 1
 Console.WriteLine("Alle ulige tal mellem 20 - 1");
