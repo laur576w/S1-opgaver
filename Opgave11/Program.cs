@@ -62,10 +62,15 @@ string slut = "";
 while (slut.ToLower() != "exit") {
     Console.Write("Skriv et tal mellem 1 og 10: ");
     x = int.Parse(Console.ReadLine());
-
+    int SadFace = 0;
     while (x < 1 || x > 10) {
-        Console.Write("Indtast nu et tal mellem 1 og 10: ");
+        Console.Write("Indtast nu et tal mellem 1 og 10 du er jo ikke så dum: ");
         x = int.Parse(Console.ReadLine());
+        SadFace++;
+        if (SadFace > 10) 
+            Console.WriteLine("Skriv en af følgende:\n" +
+                "1, 2, 3, 4, 5, 6, 7, 8, 9, 10.");
+        
     }
     Console.WriteLine("Godt gjort måske er du klogere end en i første klasse.");
 
