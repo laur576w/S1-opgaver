@@ -3,14 +3,14 @@ int x = 1;
 
 
 //runs while x is smaller than 10
-while (x <= 10) {
-    Console.WriteLine(x);
+while (x <= 9) {
     x++;
+    Console.WriteLine(x);
 }
 Console.WriteLine();
 
 //runs while x is bigger than 1
-while (x >= 1) {
+while (x >= 2) {
     Console.WriteLine(x);
     x--;
 }
@@ -18,10 +18,10 @@ Console.WriteLine();
 
 //even numbers from 1 - 20
 Console.WriteLine("Alle lige tal mellem 1 - 20");
-while (x <= 20) {
-    if (x % 2 == 0) {
-        Console.WriteLine(x);
+while (x <= 19) {
+    if (x % 2 == 1) {
         x++;
+        Console.WriteLine(x);
     }
     else
         x++;
@@ -31,9 +31,9 @@ Console.WriteLine();
 //odd numbers from 20 - 1
 Console.WriteLine("Alle ulige tal mellem 20 - 1");
 while (x >= 1) {
-    if (x % 2 == 1) {
-        Console.WriteLine(x);
+    if (x % 2 == 0) {
         x--;
+        Console.WriteLine(x);
     }
     else
         x--;
