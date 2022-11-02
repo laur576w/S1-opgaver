@@ -49,11 +49,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opgave21", "Opgave21\Opgave
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opgave22", "Opgave22\Opgave22.csproj", "{FD4979E3-F62F-4356-BA4F-6232A634BCE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opgave23", "Opgave23\Opgave23.csproj", "{215C6A26-E210-43B9-AAE4-E0FDCB84CDE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opgave23", "Opgave23\Opgave23.csproj", "{215C6A26-E210-43B9-AAE4-E0FDCB84CDE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opgave24", "Opgave24\Opgave24.csproj", "{817C5295-09D4-40F4-9931-421FC672EBC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opgave24", "Opgave24\Opgave24.csproj", "{817C5295-09D4-40F4-9931-421FC672EBC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opgave25", "Opgave25\Opgave25.csproj", "{4EB391A5-32ED-4848-8C26-73A4F1DF5528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opgave25", "Opgave25\Opgave25.csproj", "{4EB391A5-32ED-4848-8C26-73A4F1DF5528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opgave26", "Opgave26\Opgave26.csproj", "{57D445BC-5005-4D3A-98B3-17F23FD17243}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -165,6 +167,10 @@ Global
 		{4EB391A5-32ED-4848-8C26-73A4F1DF5528}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EB391A5-32ED-4848-8C26-73A4F1DF5528}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EB391A5-32ED-4848-8C26-73A4F1DF5528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D445BC-5005-4D3A-98B3-17F23FD17243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D445BC-5005-4D3A-98B3-17F23FD17243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D445BC-5005-4D3A-98B3-17F23FD17243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D445BC-5005-4D3A-98B3-17F23FD17243}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
