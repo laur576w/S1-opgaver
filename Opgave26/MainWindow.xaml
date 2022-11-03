@@ -8,13 +8,20 @@
         Title="Hero Name Generator" Height="450" Width="700">
     <Grid>
         <TextBlock x:Name="tblNameNum" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 50, 0, 0" Text="Number of hero names 1 to 10:"/>
-        <TextBox x:Name="tbxNameNum" MinHeight="20" MinWidth="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220, 50, 0, 0"/>
-        <TextBox x:Name="tbxShowNames" MinHeight="300" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,50,0,0"/>
-        <Button x:Name="btnFemaleNames" Width="150"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,120,0,0" Click="btnFemaleNames_Click">Generate Female Names</Button>
-        <Button x:Name="btnmaleNames" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120, 160, 0, 0" Click="btnmaleNames_Click">Generate Male Names</Button>
-        <Button x:Name="btnClearNames" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120, 195, 0, 0" Click="btnClearNames_Click">Clear Names</Button>
-        
-        
+        <TextBox x:Name="tbxNameNum" MinHeight="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220, 50, 0, 0" PreviewTextInput="NumericOnly" DataObject.Pasting="TextBoxPastingNumbers"/>
+        <Label x:Name="lblNotValid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,10,0,0"/>
+        <ListBox x:Name="lbxShowNames" MinHeight="300" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,50,0,0"/>
+        <Button x:Name="btnFemaleNames" Width="150"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,125,0,0" Click="btnFemaleNames_Click">
+            Generate Female Names
+        </Button>
+        <Button x:Name="btnmaleNames" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120, 160, 0, 0" Click="btnmaleNames_Click">
+            Generate Male Names
+        </Button>
+        <Button x:Name="btnClearNames" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120, 195, 0, 0" Click="btnClearNames_Click">
+            Clear Names
+        </Button>
+        <Button x:Name="btnSaveNames" Width="80" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,370,0,0" Click="btnSaveNames_Click">Save Names</Button>
+
 
     </Grid>
 </Window>
