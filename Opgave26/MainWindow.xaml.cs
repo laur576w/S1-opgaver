@@ -42,58 +42,67 @@ namespace Opgave26 {
         private void btnFemaleNames_Click(object sender, RoutedEventArgs e) {
             //gets input from textbox
             if (string.IsNullOrWhiteSpace(tbxNameNum.Text)) {
-                lblNotValid.Content = "Number not between 1-10";
+                lblNotValid.Content = "Is there even something?";
             }
             else {
                 int numberOfNames = int.Parse(tbxNameNum.Text);
+                if (numberOfNames >= 1 && numberOfNames <= 10) {
+                    lblNotValid.Content = "";
+                    for (int i = 0; i < numberOfNames; i++) {
+                        //random Firstname
+                        string firstName = femaleFirstNames[rnd.Next(0, femaleFirstNames.Count)];
 
-                for (int i = 0; i < numberOfNames; i++) {
-                    //random Firstname
-                    string firstName = femaleFirstNames[rnd.Next(0, femaleFirstNames.Count)];
+                        //random LastName
+                        string lastName = lastNames[rnd.Next(0, lastNames.Count)];
 
-                    //random LastName
-                    string lastName = lastNames[rnd.Next(0, lastNames.Count)];
+                        //the new name
+                        string newName = $"F: {firstName} {lastName}";
 
-                    //the new name
-                    string newName = $"F: {firstName} {lastName}";
-
-                    //check if it already exists if it does goes back one step if it doesn't add itto the list
-                    if (lbxShowNames.Items.Contains(newName)) {
-                        i--;
-                    }
-                    else {
-                        lbxShowNames.Items.Add(newName);
+                        //check if it already exists if it does goes back one step if it doesn't add itto the list
+                        if (lbxShowNames.Items.Contains(newName)) {
+                            i--;
+                        }
+                        else {
+                            lbxShowNames.Items.Add(newName);
+                        }
                     }
                 }
+                else
+                    lblNotValid.Content = "Number not between 1-10";
             }
         }
 
         private void btnmaleNames_Click(object sender, RoutedEventArgs e) {
             //gets input from textbox
             if (string.IsNullOrWhiteSpace(tbxNameNum.Text)) {
-                lblNotValid.Content = "Number not between 1-10";
+                lblNotValid.Content = "Is there even something?";
             }
             else {
                 int numberOfNames = int.Parse(tbxNameNum.Text);
+                if (numberOfNames >= 1 && numberOfNames <= 10) {
+                    lblNotValid.Content = "";
+                    for (int i = 0; i < numberOfNames; i++) {
+                        //random Firstname
+                        string firstName = maleFirstNames[rnd.Next(0, femaleFirstNames.Count)];
 
-                for (int i = 0; i < numberOfNames; i++) {
-                    //random Firstname
-                    string firstName = maleFirstNames[rnd.Next(0, femaleFirstNames.Count)];
+                        //random LastName
+                        string lastName = lastNames[rnd.Next(0, lastNames.Count)];
 
-                    //random LastName
-                    string lastName = lastNames[rnd.Next(0, lastNames.Count)];
+                        //the new name
+                        string newName = $"M: {firstName} {lastName}";
 
-                    //the new name
-                    string newName = $"M: {firstName} {lastName}";
-
-                    //check if it already exists if it does goes back one step if it doesn't add it to the list
-                    if (lbxShowNames.Items.Contains(newName)) {
-                        i--;
-                    }
-                    else {
-                        lbxShowNames.Items.Add(newName);
+                        //check if it already exists if it does goes back one step if it doesn't add it to the list
+                        if (lbxShowNames.Items.Contains(newName)) {
+                            i--;
+                        }
+                        else {
+                            lbxShowNames.Items.Add(newName);
+                        }
                     }
                 }
+                else
+                    lblNotValid.Content = "Number not between 1-10";
+                
             }
         }
 
@@ -136,15 +145,9 @@ namespace Opgave26 {
             sfd.Filter = "Text file (*.txt)|*.txt";
             sfd.InitialDirectory = @"C:\temp\";
 
-            if (sfd.ShowDialog() == DialogResult) {
-                if (fileName == string.Empty) {
-                    btnSaveNames_Click(sender, e);
-                }
-                else {
+            if (sfd.ShowDialog() == true) {                             
                     fileName = sfd.FileName;
-                    writeToFile(fileName);
-                }
-
+                    writeToFile(fileName);               
             }
         }
         private void writeToFile(string fileName) {
