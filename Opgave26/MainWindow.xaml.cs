@@ -142,7 +142,10 @@ namespace Opgave26 {
         private void btnSaveNames_Click(object sender, RoutedEventArgs e) {
             string fileName = "";
             SaveFileDialog sfd = new SaveFileDialog();
+
+            //saves only in txt file
             sfd.Filter = "Text file (*.txt)|*.txt";
+            //recent place you saved files to
             sfd.InitialDirectory = @"C:\temp\";
 
             if (sfd.ShowDialog() == true) {                             
@@ -153,7 +156,7 @@ namespace Opgave26 {
         private void writeToFile(string fileName) {
             using (StreamWriter SaveFile = new StreamWriter(fileName)) {
                 foreach (var item in lbxShowNames.Items)
-                    SaveFile.WriteLine(item.ToString());
+                    SaveFile.WriteLine(item.ToString());//writes it
             }
         }
     }
