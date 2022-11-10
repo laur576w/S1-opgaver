@@ -57,7 +57,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opgave25", "Opgave25\Opgave
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opgave26", "Opgave26\Opgave26.csproj", "{57D445BC-5005-4D3A-98B3-17F23FD17243}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opgave27", "Opgave27\Opgave27.csproj", "{9CEEC2DF-2FBD-40A4-BDF5-F47D4AA12DF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opgave27", "Opgave27\Opgave27.csproj", "{9CEEC2DF-2FBD-40A4-BDF5-F47D4AA12DF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opgave22.1 WPF Grid- Row, Colums", "Opgave22.1 WPF Grid- Row, Colums\Opgave22.1 WPF Grid- Row, Colums.csproj", "{DAED8EFB-8BC6-4DB7-B2AF-FEE99EB62C8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -177,6 +179,10 @@ Global
 		{9CEEC2DF-2FBD-40A4-BDF5-F47D4AA12DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CEEC2DF-2FBD-40A4-BDF5-F47D4AA12DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CEEC2DF-2FBD-40A4-BDF5-F47D4AA12DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAED8EFB-8BC6-4DB7-B2AF-FEE99EB62C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAED8EFB-8BC6-4DB7-B2AF-FEE99EB62C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAED8EFB-8BC6-4DB7-B2AF-FEE99EB62C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAED8EFB-8BC6-4DB7-B2AF-FEE99EB62C8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
